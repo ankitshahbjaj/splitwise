@@ -4,6 +4,8 @@ import com.setu.splitwise.exchange.businessObject.TransactionBO;
 import com.setu.splitwise.exchange.businessObject.UserBO;
 import com.setu.splitwise.model.Transaction;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 /**
@@ -13,6 +15,9 @@ import org.mapstruct.factory.Mappers;
 public interface TransactionMapper {
     TransactionMapper INSTANCE = Mappers.getMapper(TransactionMapper.class);
 
+    @Mappings({
+            @Mapping(target = "id", source = "transaction.id")
+    })
     TransactionBO map(Transaction transaction, UserBO payee, UserBO receiver);
 
 }

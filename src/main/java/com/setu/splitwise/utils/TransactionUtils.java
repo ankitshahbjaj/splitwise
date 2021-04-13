@@ -33,6 +33,9 @@ public class TransactionUtils {
         BigDecimal totalPaid = transactionRepository.findTotalPaidForUser(userId);
         BigDecimal totalReceived = transactionRepository.findTotalReceivedForUser(userId);
 
+        totalPaid = totalPaid != null ? totalPaid : BigDecimal.ZERO;
+        totalReceived = totalReceived != null ? totalReceived : BigDecimal.ZERO;
+
         return totalPaid.subtract(totalReceived);
     }
 
@@ -42,6 +45,9 @@ public class TransactionUtils {
 
         BigDecimal totalPaid = transactionRepository.findTotalReceivedForUserAndGroup(userId, groupId);
         BigDecimal totalReceived = transactionRepository.findTotalReceivedForUserAndGroup(userId, groupId);
+
+        totalPaid = totalPaid != null ? totalPaid : BigDecimal.ZERO;
+        totalReceived = totalReceived != null ? totalReceived : BigDecimal.ZERO;
 
         return totalPaid.subtract(totalReceived);
     }

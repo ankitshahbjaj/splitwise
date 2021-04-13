@@ -104,4 +104,29 @@ public class GroupService {
 
         return GroupMapper.INSTANCE.map(groupOptional.get(), userBOs);
     }
+
+    public String addUserToGroup(Long groupId, Long userId) {
+        Preconditions.checkNotNull(groupId, "groupId is required for addUserToGroup");
+        Preconditions.checkNotNull(userId, "userId is required for addUserToGroup");
+
+        Optional<Group> groupOptional = groupRepository.findById(groupId);
+        Preconditions.checkArgument(groupOptional.isPresent(), String.format("No Group found for Id : %s", groupId));
+
+        Optional<User> userOptional = userRepository.findById(userId);
+        Preconditions.checkArgument(userOptional.isPresent(), String.format("No user found for Id : %s", userId));
+
+        Optional<GroupMember> groupMember = groupMemberRepository.findByGroup_idAndUser_id(groupId, userId);
+        Preconditions.checkArgument(!groupMember.isPresent(), "User is already a part of group");
+
+
+        GroupMember member = GroupMember.builder()
+                .group(groupOptional.get())
+                .user(userOptional.get())
+                .build();
+
+
+        groupMemberRepository.save(member);
+
+        return "Done";
+    }
 }

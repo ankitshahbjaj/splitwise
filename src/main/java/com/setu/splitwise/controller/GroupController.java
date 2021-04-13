@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import javax.ws.rs.PUT;
 import java.util.List;
 
 /**
@@ -35,5 +36,11 @@ public class GroupController {
     @GetMapping("groups/{groupId}")
     public GroupBO getGroupsById(@PathVariable("groupId") Long groupId) {
         return groupService.getGroupsById(groupId);
+    }
+
+    @PutMapping("groups/{groupId}/user/{userId}")
+    public String addUserToGroup(@PathVariable("groupId") Long groupId,
+                                        @PathVariable("userId") Long userId) {
+        return groupService.addUserToGroup(groupId, userId);
     }
 }

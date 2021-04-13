@@ -5,7 +5,6 @@
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/service/ExpenseService.java
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/model/BaseEntity.java
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/model/GroupMember.java
-/Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/model/enums/TransactionType.java
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/repository/TransactionRepository.java
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/utils/TransactionUtils.java
 /Users/anketjain/commerce/splitwise/src/main/java/com/setu/splitwise/model/Expense.java

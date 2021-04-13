@@ -1,7 +1,6 @@
 com/setu/splitwise/exchange/response/GetExpenseResponse$GetExpenseResponseBuilder.class
 com/setu/splitwise/model/Transaction.class
 com/setu/splitwise/exchange/businessObject/TransactionBO$TransactionBOBuilder.class
-com/setu/splitwise/model/enums/TransactionType.class
 com/setu/splitwise/service/ExpenseService.class
 com/setu/splitwise/exchange/request/CreateGroupRequest$CreateGroupRequestBuilder.class
 com/setu/splitwise/exchange/request/CreateUserRequest.class

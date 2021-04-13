@@ -9,7 +9,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-04-13T17:11:52+0530",
+    date = "2021-04-13T17:19:44+0530",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_111 (Oracle Corporation)"
 )
 public class GroupMapperImpl implements GroupMapper {

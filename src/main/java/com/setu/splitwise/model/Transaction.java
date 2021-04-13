@@ -1,6 +1,5 @@
 package com.setu.splitwise.model;
 
-import com.setu.splitwise.model.enums.TransactionType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -36,7 +35,4 @@ public class Transaction extends BaseEntity{
     private BigDecimal amount;
 
     private String comment;
-
-    @Enumerated(EnumType.STRING)
-    private TransactionType transactionType;
 }
